@@ -1,0 +1,14 @@
+[data-theme='dark'] {
+  --color-bg: #202914; /* fundo principal — floresta profunda */
+  --color-bg-offset: #252f1a; /* fundo levemente mais claro */
+  --color-text: #f1efbe; /* texto principal — tom de pergaminho */
+  --color-text-offset: #b3b08b; /* texto secundário — suavizado */
+  --color-border: #3a4028; /* borda sutil, um verde-acinzentado */
+
+  --color-primary: #f5b91d; /* dourado destaque */
+  --color-primary-offset: #dba91c; /* versão ligeiramente mais quente */
+
+  --color-secondary: #4a8b4f; /* verde esmeralda natural */
+  --color-secondary-offset: #5fa45f; /* verde mais claro para hover */
+}
+

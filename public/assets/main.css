@@ -1,0 +1,102 @@
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('/assets/fonts/playfair-display/PlayfairDisplay-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('/assets/fonts/playfair-display/PlayfairDisplay-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('/assets/fonts/playfair-display/PlayfairDisplay-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root[data-theme='light'] {
+  --bg: #f8f5e3;
+  --bg-offset: #f2edcf;
+  --text: #1e1a0a;
+  --text-offset: #4b4524;
+  --border: #d5cba3;
+
+  --primary: #d4a015;
+  --primary-offset: #b38610;
+
+  --secondary: #5fa45f;
+  --secondary-offset: #4a8b4f;
+}
+
+:root[data-theme='dark'] {
+  --bg: #151b0d;
+  --bg-offset: #1a2210;
+  --text: #f1efbe;
+  --text-offset: #a6a37c;
+  --border: #2a301d;
+
+  --primary: #e5a815;
+  --primary-offset: #b8870f;
+
+  --secondary: #3a6e3f;
+  --secondary-offset: #488a4a;
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+}
+
+a {
+	font-weight: bolder !important;
+	font-size: larger !important;
+}
+
+.text-bg-dark-darktheme {
+  color: var(--text);
+  background-color: var(--bg);
+}
+
+.cover {
+  min-height: calc(100vh - var(--header-footer-offset, 0px));
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header .brand { color: var(--text); }
+.header .nav__link { color: var(--text); opacity: .8; }
+.header .nav__link:hover { opacity: 1; }
+
+.header a.brand { font-size: 2rem !important; }
+
+.btn-warning {
+  --bs-btn-bg: var(--primary);
+  --bs-btn-border-color: var(--primary);
+  --bs-btn-hover-bg: #dba91c;
+  --bs-btn-hover-border-color: #dba91c;
+  --bs-btn-color: #202916;
+}
+
+.visually-hidden-focusable:active,
+.visually-hidden-focusable:focus {
+  position: static !important;
+  width: auto; height: auto;
+  margin: 1rem; padding: .5rem .75rem;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: .25rem;
+}
+
+.header, footer {
+    height: 150px;
+    display: flex;
+}
