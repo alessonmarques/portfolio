@@ -66,11 +66,6 @@
     gap: 2rem;
   }
 
-@media (max-width: 425px) {
-    #github .gh-stats img {
-        width: 100%;
-    }
-}
 
 @media (max-width: 1050px) {
     #github .gh-stats {
@@ -80,9 +75,24 @@
     }
 
     #github .gh-stats img {
-        width: 65%;
+        width: 60.5%;
     }
 }
+
+@media (max-width: 575px) {
+    #github .gh-stats img {
+        width: 90%;
+    }
+}
+
+@media (max-width: 425px) {
+    #github .gh-stats img {
+        width: 100%;
+    }
+}
+
+
+
   .ContributionCalendar-day[data-level="0"],
   .calendar svg .ContributionCalendar-day[data-level="0"] 
   { background-color: var(--cal-0) !important;fill: var(--cal-0) !important; }
