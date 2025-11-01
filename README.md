@@ -1,21 +1,18 @@
-# Portfolio PHP — 2 páginas
+# .-.
 
-**Requisitos:** PHP 8+
+           _                                                      _          
+     /\   | |                                                    | |         
+    /  \  | | ___  ___ ___  ___  _ __      ___ ___  _ __ ___     | |__  _ __ 
+   / /\ \ | |/ _ \/ __/ __|/ _ \| '_ \    / __/ _ \| '_ ` _ \    | '_ \| '__|
+  / ____ \| |  __/\__ \__ \ (_) | | | |  | (_| (_) | | | | | |  _| |_) | |   
+ /_/    \_\_|\___||___/___/\___/|_| |_| (_)___\___/|_| |_| |_| (_)_.__/|_|   
+                                                                                                                                                                                                                 
+Created by Alesson Marques - https://alesson.com.br/
 
-```bash
-php -S localhost:8000 -t public
-```
 
-Abra http://localhost:8000
+Github: https://github.com/AlessonMarques
+LinkedIn: https://www.linkedin.com/in/alessonmarques/
+X: https://x.com/aneccoh
 
-### Rotas
-- `//home` — Home
-- `//sobre` — Sobre/Contato
 
-### Tradução
-- Seletor no topo (pt-BR / en)
-- Também funciona `?lang=en` e persiste em `localStorage`
-
-### Layout
-- Um layout único (`views/layout.php`) injeta a view selecionada (`views/*.php`).
-- Navegação contém **apenas 2 itens**.
+E-mail: alessonmarques@live.com
