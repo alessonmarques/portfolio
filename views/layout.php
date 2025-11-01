@@ -44,16 +44,16 @@ E-mail: alessonmarques@live.com
 
     <header class="header" role="banner">
       <div class="container header-content d-flex align-items-center justify-content-between py-3">
-        <a class="brand text-decoration-none fw-bold" href="<?= $site['baseUrl'] ?>/?p=home">Alesson</a>
+        <a class="brand text-decoration-none fw-bold" href="<?= $site['baseUrl'] ?>/home">Alesson</a>
 
         <div class="actions d-inline-flex align-items-center gap-2">
           <nav class="nav" role="navigation" aria-label="Primary">
             <ul class="nav-menu nav mb-0" id="nav-menu">
               <li class="nav-item">
-                <a class="nav-link link-sub-marker nav-link px-2" data-i18n="nav.home" href="<?= $site['baseUrl'] ?>/?p=home">Início</a>
+                <a class="nav-link link-sub-marker nav-link px-2" data-i18n="nav.home" href="<?= $site['baseUrl'] ?>/home">Início</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link link-sub-marker nav-link px-2" data-i18n="nav.about" href="<?= $site['baseUrl'] ?>/?p=about">Sobre</a>
+                <a class="nav-link link-sub-marker nav-link px-2" data-i18n="nav.about" href="<?= $site['baseUrl'] ?>/about">Sobre</a>
               </li>
             </ul>
           </nav>

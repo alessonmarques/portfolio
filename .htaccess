@@ -1,28 +1,10 @@
-# Ative reescrita
+Options -MultiViews
 RewriteEngine On
 
-# Se o site estiver num subdiretório, você pode declarar a base:
-# RewriteBase /meu-site
-
-# Não reescreve arquivos nem diretórios reais
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
-# Redirects bonitinhos (opcional, ajuda SEO/canonical)
-RewriteCond %{THE_REQUEST} \s/+index\.php\?p=home[\s&] [NC]
-RewriteRule ^ / [R=301,L]
-
-RewriteCond %{THE_REQUEST} \s/+index\.php\?p=about[\s&] [NC]
-RewriteRule ^ /about [R=301,L]
-
-# Roteamento "bonito" -> index.php?p=...
-# Raiz = home
 RewriteRule ^$ index.php?p=home [QSA,L]
 
-# /about -> p=about
-RewriteRule ^about/?$ index.php?p=about [QSA,L]
-
-# (Opcional) regra genérica: /qualquer-slug -> p=slug
-# Ative se for adicionar mais páginas sem criar regra por regra
-# RewriteRule ^([a-z0-9-]+)/?$ index.php?p=$1 [QSA,L,NC]
+RewriteRule ^([^?]+)$ index.php?p=$1 [QSA,L]
