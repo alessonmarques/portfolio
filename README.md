@@ -9,8 +9,8 @@ php -S localhost:8000 -t public
 Abra http://localhost:8000
 
 ### Rotas
-- `/?p=home` — Home
-- `/?p=sobre` — Sobre/Contato
+- `//home` — Home
+- `//sobre` — Sobre/Contato
 
 ### Tradução
 - Seletor no topo (pt-BR / en)

@@ -1,0 +1,130 @@
+:root[data-theme='main'] {
+  --cal-0: #f2efe5; 
+  --cal-1: #D6D0A8;
+  --cal-2: #AA9C4F;
+  --cal-3: #807226;
+  --cal-4: #4B4524; 
+}
+:root[data-theme='link'] {
+  --cal-0: #DEFFE1;
+  --cal-1: #ADEDB4;
+  --cal-2: #63BA6B;
+  --cal-3: #2D8736;
+  --cal-4: #0B5513;
+}
+:root[data-theme='wario'] {
+  --cal-0: #EEDEFF; 
+  --cal-1: #CCADED;
+  --cal-2: #8D63BA;
+  --cal-3: #582D87;
+  --cal-4: #2F0B55;
+}
+
+:root[data-theme='omen'] {
+  --cal-0: #E4DEFF;
+  --cal-1: #B9ADED;
+  --cal-2: #7363BA;
+  --cal-3: #3D2D87;
+  --cal-4: #180B54;
+}
+
+
+  #github {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+#github .gh-projects .cards {
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(410px, 1fr));
+    display: grid;
+    gap: 1.5rem;
+}
+
+@media (max-width: 720px) {
+    #github .gh-projects .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+  #github .gh-calendar {
+    background: var(--bg-offset, #252f1a);
+    border: 1px solid var(--border, #3a4028);
+    border-radius: 14px;
+    padding: 1rem;
+  }
+  #github h2 {
+    color: var(--primary, #f5b91d);
+    margin-bottom: .75rem;
+  }
+
+  #github .gh-stats {
+    display: flex;  
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 2rem;
+  }
+
+@media (max-width: 425px) {
+    #github .gh-stats img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1050px) {
+    #github .gh-stats {
+        overflow: hidden;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #github .gh-stats img {
+        width: 65%;
+    }
+}
+  .ContributionCalendar-day[data-level="0"],
+  .calendar svg .ContributionCalendar-day[data-level="0"] 
+  { background-color: var(--cal-0) !important;fill: var(--cal-0) !important; }
+  .ContributionCalendar-day[data-level="1"],
+  .calendar svg .ContributionCalendar-day[data-level="1"] 
+  { background-color: var(--cal-1) !important;fill: var(--cal-1) !important; }
+  .ContributionCalendar-day[data-level="2"],
+  .calendar svg .ContributionCalendar-day[data-level="2"] 
+  { background-color: var(--cal-2) !important;fill: var(--cal-2) !important; }
+  .ContributionCalendar-day[data-level="3"],
+  .calendar svg .ContributionCalendar-day[data-level="3"] 
+  { background-color: var(--cal-3) !important;fill: var(--cal-3) !important; }
+  .ContributionCalendar-day[data-level="4"],
+  .calendar svg .ContributionCalendar-day[data-level="4"] 
+  { background-color: var(--cal-4) !important;fill: var(--cal-4) !important; }
+
+  .calendar svg .ContributionCalendar-day:focus,
+  .calendar svg .ContributionCalendar-day:hover {
+    outline: 2px solid var(--primary, #f5b91d);
+    outline-offset: 2px;
+  }
+
+  .calendar .contrib-footer,
+  .calendar .contrib-column,
+  .calendar .contrib-number {
+    color: var(--text-offset, #b3b08b);
+  }
+
+  @media (max-width: 720px) {
+    #github .gh-calendar { padding: .75rem; }
+  }
+
+  div.calendar {
+    font-size: 14px;
+    font-family: 'Playfair Display', serif;
+    border: none;
+  }
+
+  div.calendar > div {
+    padding-top: 1rem;
+  }
+
+  div.calendar > div > a {
+    display: none;
+  }

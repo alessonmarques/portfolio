@@ -1,0 +1,108 @@
+
+* {
+  --theme-gradient-main: linear-gradient(90deg, #1ad4d4 0%, #f417c1 100%);
+  --theme-gradient-link: linear-gradient(90deg, #e5a815 0%, #488a4a 100%);
+  --theme-gradient-wario: linear-gradient(90deg, #F7C605 0%, #7F3FBF 100%);
+  --theme-gradient-omen: linear-gradient(90deg, #7B5EF9 0%, #9B8CFF 100%);
+}
+.theme-goo-picker{
+  position: fixed; right: 20px; bottom: 24px; z-index: 9999;
+  --tg-size:64px; --tg-gap:14px; --tg-elev:0 10px 30px rgba(0,0,0,.25);
+}
+.theme-goo-picker .tg-sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+.theme-goo-picker .tg-wrap{display:grid;gap:28px;place-items:center}
+.theme-goo-picker .tg-card{padding:16px 20px;border-radius:14px;background:#00000008;max-width:640px;text-align:center}
+.theme-goo-picker .tg-title{margin:0 0 6px;font:600 18px/1.2 system-ui}
+.theme-goo-picker .tg-sub{margin:0;opacity:.8}
+
+.theme-goo-picker .tg-row{display:flex;gap:40px;align-items:flex-end}
+.theme-goo-picker .tg-picker{position:relative;width:var(--tg-size);height:var(--tg-size);filter:url(#goo)}
+
+.theme-goo-picker .tg-icon{width:58%;height:58%;object-fit:contain;display:block;pointer-events:none;filter:brightness(0) invert(1);opacity:.8}
+
+.theme-goo-picker .tg-trigger{
+  --ring: var(--secondary);
+  width:var(--tg-size);height:var(--tg-size);border:0;border-radius:999px;cursor:pointer;display:grid;place-items:center;
+  background: var(--theme-gradient);
+  box-shadow:var(--tg-elev);position:relative;isolation:isolate;outline:none;transition:transform .2s ease, opacity .2s ease;
+}
+.theme-goo-picker .tg-trigger:active{transform:scale(.97)}
+.theme-goo-picker .tg-trigger::after{
+  content:"";position:absolute;inset:0;border-radius:inherit;border:3px solid var(--ring);
+  transform:scale(.2);opacity:0;pointer-events:none
+}
+.theme-goo-picker .tg-trigger.tg-splash::after{animation:tg-splash .6s ease forwards}
+@keyframes tg-splash{10%{opacity:.85}100%{opacity:0;transform:scale(1.35)}}
+
+.theme-goo-picker .tg-picker[aria-expanded="false"] .tg-trigger{opacity:.65}
+.theme-goo-picker .tg-picker[aria-expanded="false"] .tg-trigger:hover{opacity:.85}
+.theme-goo-picker .tg-picker[aria-expanded="true"]  .tg-trigger{opacity:1}
+
+.theme-goo-picker .tg-options{
+  position:absolute; left:50%; bottom:calc(100% + 10px);
+  display:flex; flex-direction:column; align-items:center; gap:var(--tg-gap);
+  transform:translateX(-50%) translateY(10px) scale(.7);
+  opacity:0; pointer-events:none;
+  transition:transform .36s cubic-bezier(.2,.8,.2,1), opacity .2s ease;
+}
+.theme-goo-picker .tg-picker[aria-expanded="true"] .tg-options{
+  opacity:1; pointer-events:auto; transform:translateX(-50%) translateY(0) scale(1);
+}
+
+.theme-goo-picker .tg-option{
+  width:48px;height:48px;border:0;border-radius:999px;cursor:pointer;display:grid;place-items:center;
+  background: var(--opt-bg, #777);           /* fallback */
+  box-shadow:var(--tg-elev);position:relative;outline:none;
+  transition: transform .28s ease, filter .2s ease, opacity .2s ease;
+  transform:translateY(8px); opacity:0;
+}
+
+.theme-goo-picker .tg-option::before{
+  content:"";position:absolute;width:120%;height:120%;border-radius:inherit;
+  background: var(--opt-bg, #777);
+  z-index:-1;filter:blur(10px);opacity:.65;transform:scale(.8)
+}
+
+.theme-goo-picker .tg-picker[aria-expanded="true"] .tg-option{transform:translateY(0);opacity:1}
+.theme-goo-picker .tg-option:hover{transform:translateY(-3px)}
+.theme-goo-picker .tg-option:active{transform:translateY(0) scale(.98)}
+
+.theme-goo-picker .tg-option.bg-theme-main  { --opt-bg:#4b4524; }
+.theme-goo-picker .tg-option.bg-theme-link  { --opt-bg:#488a4a; }
+.theme-goo-picker .tg-option.bg-theme-wario { --opt-bg:#7F3FBF; }
+.theme-goo-picker .tg-option.bg-theme-omen  { --opt-bg:#7B5EF9; }
+
+.theme-goo-picker .tg-option:hover { transform: translateY(-3px); filter: brightness(1.05); }
+.theme-goo-picker .tg-option:active{ transform: translateY(0) scale(.98); filter: none; }
+
+.theme-goo-picker .tg-picker[aria-expanded="true"] .tg-option:nth-child(1){transition-delay:0ms}
+.theme-goo-picker .tg-picker[aria-expanded="true"] .tg-option:nth-child(2){transition-delay:50ms}
+.theme-goo-picker .tg-picker[aria-expanded="true"] .tg-option:nth-child(3){transition-delay:100ms}
+
+.theme-goo-picker .tg-option.hide{display:none!important}
+
+.tg-option .tg-icon, .tg-trigger .tg-icon {
+  filter: brightness(0) invert(1); 
+  opacity: 0.8;
+}
+
+.bg-theme-main {
+    background: var(--theme-gradient-main) !important;
+}
+
+.bg-theme-link {
+    background: var(--theme-gradient-link) !important;
+}
+
+.bg-theme-wario {
+    background: var(--theme-gradient-wario) !important;
+}
+
+.bg-theme-omen {
+    background: var(--theme-gradient-omen) !important;
+}
+
+@media (prefers-reduced-motion: reduce){
+    .theme-goo-picker .tg-options, .theme-goo-picker .tg-trigger{transition:none}
+}

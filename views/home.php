@@ -1,18 +1,14 @@
 <section class="hero">
-  <h1 class="hero__title" data-i18n="hero.title">Oi, eu sou o Alesson.</h1>
-  <p class="hero__blurb lead" data-i18n="hero.blurb">Construo interfaces e backends simples, rápidos e acessíveis.</p>
-  <div class="hero__cta">
-    <a class="btn" href="?p=sobre" data-i18n="cta.about">Saiba mais</a>
+  <h1 class="hero-title" data-i18n="home.title">Oi, eu sou o Alesson.</h1>
+  <p class="hero" data-i18n="home.blurb">Sou um desenvolvedor, atuando do Rio de Janeiro, com foco em backend PHP e experiência em todo o desenvolvimento web. Gosto de explorar novas tecnologias e aprimorar constantemente minhas habilidades, sem deixar o front-end de lado.</p>
+  <div class="hero-cta">
+    <a class="btn link-sub-marker" href="?p=about" data-i18n="cta.about">Leia mais</a>
   </div>
 </section>
 
-<section class="grid">
-  <article class="card">
-    <h2 data-i18n="cards.speed.title">Rápido por padrão</h2>
-    <p data-i18n="cards.speed.text">HTML limpo, CSS mínimo e zero dependências pesadas.</p>
-  </article>
-  <article class="card">
-    <h2 data-i18n="cards.access.title">Acessível</h2>
-    <p data-i18n="cards.access.text">Semântica, contraste alto e navegação por teclado.</p>
-  </article>
-</section>
+<?php /*
+  <section class="projects">
+  </section>
+*/ ?>
+
+<?php require __DIR__ . '/partials/github.php'; ?>

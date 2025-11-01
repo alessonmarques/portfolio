@@ -1,0 +1,9 @@
+{
+    "scripts": {
+        "build:js": "esbuild public/assets/js/app.entry.js --bundle --minify --sourcemap --outfile=public/assets/app.min.js",
+        "build:js:1line": "esbuild public/assets/js/app.entry.js --bundle --minify --format=iife --target=es2018 --legal-comments=none --line-limit=0 --outfile=public/assets/app.min.js",
+        "build:css": "esbuild public/assets/css/app.entry.css --bundle --minify --loader:.svg=file --loader:.ttf=file --loader:.woff=file --loader:.woff2=file --asset-names=public-assets/[name]-[hash] --public-path=/assets/ --outfile=public/assets/app.min.css",
+        "build": "npm run build:js && npm run build:css",
+        "watch": "esbuild public/assets/js/app.entry.js --bundle --minify --sourcemap --outfile=public/assets/app.min.js --watch & esbuild public/assets/css/app.entry.css --bundle --minify --loader:.svg=file --loader:.ttf=file --loader:.woff=file --loader:.woff2=file --asset-names=public-assets/[name]-[hash] --public-path=/assets/ --outfile=public/assets/app.min.css --watch"
+    }
+}
