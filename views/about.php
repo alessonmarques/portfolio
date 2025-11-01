@@ -91,7 +91,7 @@
     <a class="link-marker" href="mailto:alessonmarques@live.com">alessonmarques@live.com</a>
     <div class="social-links">
       <a href="https://www.linkedin.com/in/alessonmarques/" target="_blank" rel="noopener noreferrer" class="social-link linkedin"></a>
-      <a href="https://github.com/aneccoh" target="_blank" rel="noopener noreferrer" class="social-link github"></a>
+      <a href="https://github.com/alessonmarques" target="_blank" rel="noopener noreferrer" class="social-link github"></a>
       <a href="https://x.com/aneccoh" target="_blank" rel="noopener noreferrer" class="social-link X"></a>
     </div>
   </div>
